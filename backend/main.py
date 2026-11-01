@@ -15,7 +15,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000","https://dob-calculator-frontend.vercel.app"],
+    allow_origins=["http://localhost:3000", "https://dob-calculator-frontend.onrender.com"],
     allow_credentials=False,
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type"],
