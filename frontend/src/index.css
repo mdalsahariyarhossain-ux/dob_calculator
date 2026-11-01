@@ -1,0 +1,203 @@
+
+:root {
+  --primary: #5265e8;
+  --primary-dark: #3d4fc7;
+  --text: #202746;
+  --muted: #777f98;
+  --border: #e4e8f3;
+  --background: #f5f6fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 10% 10%, #e6eaff, transparent 35%),
+    radial-gradient(circle at 90% 90%, #e9e5ff, transparent 32%),
+    var(--background);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 18px;
+}
+
+.calculator-card {
+  width: 100%;
+  max-width: 530px;
+  padding: 40px;
+  border: 1px solid white;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 24px 80px rgba(49, 58, 115, 0.09);
+}
+
+.brand-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: white;
+  font-size: 28px;
+  background: linear-gradient(135deg, #7585ff, #4e57d8);
+}
+
+.eyebrow {
+  margin-top: 26px;
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 38px);
+  line-height: 1.25;
+}
+
+.description {
+  margin: 16px 0 28px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input[type="date"] {
+  width: 100%;
+  min-height: 52px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fbfcff;
+  color: var(--text);
+}
+
+input:focus {
+  outline: 2px solid #5265e855;
+  border-color: var(--primary);
+}
+
+button {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 20px;
+  padding: 14px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.error-message {
+  color: #c03948;
+  font-size: 13px;
+}
+
+.privacy-note {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.age-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.age-box {
+  padding: 20px 6px;
+  border: 1px solid #e7eaff;
+  border-radius: 14px;
+  background: #f5f6ff;
+  text-align: center;
+}
+
+.age-box strong {
+  display: block;
+  color: var(--primary);
+  font-size: clamp(25px, 5vw, 36px);
+}
+
+.age-box span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.date-details {
+  padding: 10px 15px;
+  border-radius: 12px;
+  background: #fafbff;
+}
+
+.date-details p {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.date-details span {
+  color: var(--muted);
+}
+
+.date-details strong {
+  overflow-wrap: anywhere;
+}
+
+.page-footer {
+  margin-top: 24px;
+  color: #8b91a7;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .calculator-card {
+    padding: 26px 20px;
+  }
+
+  .age-grid {
+    gap: 7px;
+  }
+}
