@@ -39,8 +39,7 @@ export default function Home() {
         <h1>Calculate your age</h1>
 
         <p className="description">
-          Enter your date of birth to calculate your exact age
-          in years, months and days.
+          Enter your date of birth 
         </p>
 
         <form onSubmit={handleSubmit}>
